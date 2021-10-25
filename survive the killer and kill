@@ -1,1 +1,1022 @@
+-- Gui to Lua
+-- Version: 3.1
 
+-- Instances:
+
+local sat = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local off = Instance.new("TextButton")
+local wpns = Instance.new("TextButton")
+local Frame_2 = Instance.new("Frame")
+local off_2 = Instance.new("TextButton")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local MG42 = Instance.new("TextButton")
+local AN94 = Instance.new("TextButton")
+local SVD = Instance.new("TextButton")
+local M14 = Instance.new("TextButton")
+local M16A2 = Instance.new("TextButton")
+local M1911 = Instance.new("TextButton")
+local MP5k = Instance.new("TextButton")
+local M1014 = Instance.new("TextButton")
+local RayGun = Instance.new("TextButton")
+local AWP = Instance.new("TextButton")
+local M4A1 = Instance.new("TextButton")
+local DE = Instance.new("TextButton")
+local Crossbow = Instance.new("TextButton")
+local AK47 = Instance.new("TextButton")
+local P90 = Instance.new("TextButton")
+local R870 = Instance.new("TextButton")
+local DB = Instance.new("TextButton")
+local G36C = Instance.new("TextButton")
+local TextBox = Instance.new("TextBox")
+local tps = Instance.new("TextButton")
+local Frame_3 = Instance.new("Frame")
+local off_3 = Instance.new("TextButton")
+local Spawn = Instance.new("TextButton")
+local PaP = Instance.new("TextButton")
+local vr = Instance.new("TextButton")
+local Alien = Instance.new("TextButton")
+local TheWayOut = Instance.new("TextButton")
+local AtomicBomb = Instance.new("TextButton")
+local ag = Instance.new("TextButton")
+local misc = Instance.new("TextButton")
+local Frame_4 = Instance.new("Frame")
+local off_4 = Instance.new("TextButton")
+local pnt = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+sat.Name = "sat"
+sat.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+sat.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = sat
+Frame.BackgroundColor3 = Color3.fromRGB(148, 214, 161)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.169595405, 0, 0.471896917, 0)
+Frame.Size = UDim2.new(0, 185, 0, 181)
+Frame.Visible = false
+
+off.Name = "off"
+off.Parent = Frame
+off.BackgroundColor3 = Color3.fromRGB(173, 0, 0)
+off.BorderSizePixel = 0
+off.Position = UDim2.new(0.9297297, 0, -0.0294117648, 0)
+off.Size = UDim2.new(0, 21, 0, 19)
+off.Font = Enum.Font.SourceSans
+off.Text = "X"
+off.TextColor3 = Color3.fromRGB(0, 0, 0)
+off.TextSize = 20.000
+
+wpns.Name = "wpns"
+wpns.Parent = Frame
+wpns.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+wpns.BorderSizePixel = 0
+wpns.Position = UDim2.new(0.059459459, 0, 0.126050428, 0)
+wpns.Size = UDim2.new(0, 161, 0, 37)
+wpns.Font = Enum.Font.SourceSans
+wpns.Text = "Weapon Mods"
+wpns.TextColor3 = Color3.fromRGB(0, 0, 0)
+wpns.TextSize = 20.000
+
+Frame_2.Parent = wpns
+Frame_2.BackgroundColor3 = Color3.fromRGB(124, 179, 134)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(1.08074534, 0, -0.027027851, 0)
+Frame_2.Size = UDim2.new(0, 210, 0, 230)
+Frame_2.Visible = false
+
+off_2.Name = "off"
+off_2.Parent = Frame_2
+off_2.BackgroundColor3 = Color3.fromRGB(173, 0, 0)
+off_2.BorderSizePixel = 0
+off_2.Position = UDim2.new(0.958301127, 0, -0.0502450988, 0)
+off_2.Size = UDim2.new(0, 21, 0, 19)
+off_2.Font = Enum.Font.SourceSans
+off_2.Text = "X"
+off_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+off_2.TextSize = 20.000
+
+ScrollingFrame.Parent = Frame_2
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(116, 167, 124)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.0380952395, 0, 0.0336505398, 0)
+ScrollingFrame.Size = UDim2.new(0, 194, 0, 215)
+
+MG42.Name = "MG42"
+MG42.Parent = ScrollingFrame
+MG42.Active = false
+MG42.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+MG42.BorderSizePixel = 0
+MG42.Position = UDim2.new(0.0567010306, 0, 0.0359682813, 0)
+MG42.Size = UDim2.new(0, 79, 0, 40)
+MG42.Font = Enum.Font.SourceSans
+MG42.Text = "MG42"
+MG42.TextColor3 = Color3.fromRGB(0, 0, 0)
+MG42.TextSize = 20.000
+
+AN94.Name = "AN94"
+AN94.Parent = ScrollingFrame
+AN94.Active = false
+AN94.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+AN94.BorderSizePixel = 0
+AN94.Position = UDim2.new(0.5, 0, 0.0359682813, 0)
+AN94.Size = UDim2.new(0, 79, 0, 40)
+AN94.Font = Enum.Font.SourceSans
+AN94.Text = "AN-94 (not in game YET)"
+AN94.TextColor3 = Color3.fromRGB(255, 0, 4)
+AN94.TextScaled = true
+AN94.TextSize = 20.000
+AN94.TextWrapped = true
+
+SVD.Name = "SVD"
+SVD.Parent = ScrollingFrame
+SVD.Active = false
+SVD.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+SVD.BorderSizePixel = 0
+SVD.Position = UDim2.new(0.0567010306, 0, 0.137604162, 0)
+SVD.Size = UDim2.new(0, 79, 0, 40)
+SVD.Font = Enum.Font.SourceSans
+SVD.Text = "SVD"
+SVD.TextColor3 = Color3.fromRGB(0, 0, 0)
+SVD.TextSize = 20.000
+
+M14.Name = "M14"
+M14.Parent = ScrollingFrame
+M14.Active = false
+M14.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+M14.BorderSizePixel = 0
+M14.Position = UDim2.new(0.5, 0, 0.137604162, 0)
+M14.Size = UDim2.new(0, 79, 0, 40)
+M14.Font = Enum.Font.SourceSans
+M14.Text = "M14"
+M14.TextColor3 = Color3.fromRGB(0, 0, 0)
+M14.TextSize = 20.000
+
+M16A2.Name = "M16A2"
+M16A2.Parent = ScrollingFrame
+M16A2.Active = false
+M16A2.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+M16A2.BorderSizePixel = 0
+M16A2.Position = UDim2.new(0.5, 0, 0.241713956, 0)
+M16A2.Size = UDim2.new(0, 79, 0, 40)
+M16A2.Font = Enum.Font.SourceSans
+M16A2.Text = "M16A2"
+M16A2.TextColor3 = Color3.fromRGB(0, 0, 0)
+M16A2.TextSize = 20.000
+
+M1911.Name = "M1911"
+M1911.Parent = ScrollingFrame
+M1911.Active = false
+M1911.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+M1911.BorderSizePixel = 0
+M1911.Position = UDim2.new(0.0567010343, 0, 0.241713956, 0)
+M1911.Size = UDim2.new(0, 79, 0, 40)
+M1911.Font = Enum.Font.SourceSans
+M1911.Text = "M1911"
+M1911.TextColor3 = Color3.fromRGB(0, 0, 0)
+M1911.TextSize = 20.000
+
+MP5k.Name = "MP5k"
+MP5k.Parent = ScrollingFrame
+MP5k.Active = false
+MP5k.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+MP5k.BorderSizePixel = 0
+MP5k.Position = UDim2.new(0.5, 0, 0.350171566, 0)
+MP5k.Size = UDim2.new(0, 79, 0, 40)
+MP5k.Font = Enum.Font.SourceSans
+MP5k.Text = "MP5k"
+MP5k.TextColor3 = Color3.fromRGB(0, 0, 0)
+MP5k.TextSize = 20.000
+
+M1014.Name = "M1014"
+M1014.Parent = ScrollingFrame
+M1014.Active = false
+M1014.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+M1014.BorderSizePixel = 0
+M1014.Position = UDim2.new(0.0567010343, 0, 0.350171566, 0)
+M1014.Size = UDim2.new(0, 79, 0, 40)
+M1014.Font = Enum.Font.SourceSans
+M1014.Text = "M1014"
+M1014.TextColor3 = Color3.fromRGB(0, 0, 0)
+M1014.TextSize = 20.000
+
+RayGun.Name = "RayGun"
+RayGun.Parent = ScrollingFrame
+RayGun.Active = false
+RayGun.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+RayGun.BorderSizePixel = 0
+RayGun.Position = UDim2.new(0.0567010343, 0, 0.459359467, 0)
+RayGun.Size = UDim2.new(0, 79, 0, 40)
+RayGun.Font = Enum.Font.SourceSans
+RayGun.Text = "RayGun"
+RayGun.TextColor3 = Color3.fromRGB(0, 0, 0)
+RayGun.TextSize = 20.000
+
+AWP.Name = "AWP"
+AWP.Parent = ScrollingFrame
+AWP.Active = false
+AWP.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+AWP.BorderSizePixel = 0
+AWP.Position = UDim2.new(0.5, 0, 0.459359467, 0)
+AWP.Size = UDim2.new(0, 79, 0, 40)
+AWP.Font = Enum.Font.SourceSans
+AWP.Text = "AWP"
+AWP.TextColor3 = Color3.fromRGB(0, 0, 0)
+AWP.TextSize = 20.000
+
+M4A1.Name = "M4A1"
+M4A1.Parent = ScrollingFrame
+M4A1.Active = false
+M4A1.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+M4A1.BorderSizePixel = 0
+M4A1.Position = UDim2.new(0.5, 0, 0.56760776, 0)
+M4A1.Size = UDim2.new(0, 79, 0, 40)
+M4A1.Font = Enum.Font.SourceSans
+M4A1.Text = "M4A1"
+M4A1.TextColor3 = Color3.fromRGB(0, 0, 0)
+M4A1.TextSize = 20.000
+
+DE.Name = "DE"
+DE.Parent = ScrollingFrame
+DE.Active = false
+DE.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+DE.BorderSizePixel = 0
+DE.Position = UDim2.new(0.0567010343, 0, 0.56760776, 0)
+DE.Size = UDim2.new(0, 79, 0, 40)
+DE.Font = Enum.Font.SourceSans
+DE.Text = "Desert Eagle"
+DE.TextColor3 = Color3.fromRGB(0, 0, 0)
+DE.TextSize = 18.000
+
+Crossbow.Name = "Crossbow"
+Crossbow.Parent = ScrollingFrame
+Crossbow.Active = false
+Crossbow.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+Crossbow.BorderSizePixel = 0
+Crossbow.Position = UDim2.new(0.5, 0, 0.676553845, 0)
+Crossbow.Size = UDim2.new(0, 79, 0, 40)
+Crossbow.Font = Enum.Font.SourceSans
+Crossbow.Text = "Crossbow"
+Crossbow.TextColor3 = Color3.fromRGB(0, 0, 0)
+Crossbow.TextSize = 20.000
+
+AK47.Name = "AK47"
+AK47.Parent = ScrollingFrame
+AK47.Active = false
+AK47.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+AK47.BorderSizePixel = 0
+AK47.Position = UDim2.new(0.0567010343, 0, 0.678727746, 0)
+AK47.Size = UDim2.new(0, 79, 0, 40)
+AK47.Font = Enum.Font.SourceSans
+AK47.Text = "AK-47"
+AK47.TextColor3 = Color3.fromRGB(0, 0, 0)
+AK47.TextSize = 20.000
+
+P90.Name = "P90"
+P90.Parent = ScrollingFrame
+P90.Active = false
+P90.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+P90.BorderSizePixel = 0
+P90.Position = UDim2.new(0.0567010343, 0, 0.792021632, 0)
+P90.Size = UDim2.new(0, 79, 0, 40)
+P90.Font = Enum.Font.SourceSans
+P90.Text = "P90"
+P90.TextColor3 = Color3.fromRGB(0, 0, 0)
+P90.TextSize = 20.000
+
+R870.Name = "R870"
+R870.Parent = ScrollingFrame
+R870.Active = false
+R870.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+R870.BorderSizePixel = 0
+R870.Position = UDim2.new(0.5, 0, 0.911586881, 0)
+R870.Size = UDim2.new(0, 79, 0, 40)
+R870.Font = Enum.Font.SourceSans
+R870.Text = "R870"
+R870.TextColor3 = Color3.fromRGB(0, 0, 0)
+R870.TextSize = 18.000
+
+DB.Name = "DB"
+DB.Parent = ScrollingFrame
+DB.Active = false
+DB.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+DB.BorderSizePixel = 0
+DB.Position = UDim2.new(0.5, 0, 0.792021632, 0)
+DB.Size = UDim2.new(0, 79, 0, 40)
+DB.Font = Enum.Font.SourceSans
+DB.Text = "DB Shotgun"
+DB.TextColor3 = Color3.fromRGB(0, 0, 0)
+DB.TextSize = 18.000
+
+G36C.Name = "G36C"
+G36C.Parent = ScrollingFrame
+G36C.Active = false
+G36C.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+G36C.BorderSizePixel = 0
+G36C.Position = UDim2.new(0.0567010343, 0, 0.911586881, 0)
+G36C.Size = UDim2.new(0, 79, 0, 40)
+G36C.Font = Enum.Font.SourceSans
+G36C.Text = "G36C"
+G36C.TextColor3 = Color3.fromRGB(0, 0, 0)
+G36C.TextSize = 18.000
+
+TextBox.Parent = Frame_2
+TextBox.BackgroundColor3 = Color3.fromRGB(202, 4, 4)
+TextBox.BackgroundTransparency = 0.500
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.0904761925, 0, -0.180453464, 0)
+TextBox.Size = UDim2.new(0, 172, 0, 34)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.PlaceholderText = "!ACTIVATE BEFORE GETTING THE GUN!"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 12.000
+TextBox.TextWrapped = true
+
+tps.Name = "tps"
+tps.Parent = Frame
+tps.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+tps.BorderSizePixel = 0
+tps.Position = UDim2.new(0.059459459, 0, 0.396768689, 0)
+tps.Size = UDim2.new(0, 161, 0, 37)
+tps.Font = Enum.Font.SourceSans
+tps.Text = "Teleports"
+tps.TextColor3 = Color3.fromRGB(0, 0, 0)
+tps.TextSize = 20.000
+
+Frame_3.Parent = tps
+Frame_3.BackgroundColor3 = Color3.fromRGB(67, 97, 72)
+Frame_3.BorderSizePixel = 0
+Frame_3.Position = UDim2.new(-1.37267077, 0, -8.24799429e-07, 0)
+Frame_3.Size = UDim2.new(0, 210, 0, 311)
+Frame_3.Visible = false
+
+off_3.Name = "off"
+off_3.Parent = Frame_3
+off_3.BackgroundColor3 = Color3.fromRGB(173, 0, 0)
+off_3.BorderSizePixel = 0
+off_3.Position = UDim2.new(-0.0512226522, 0, -0.0401466265, 0)
+off_3.Size = UDim2.new(0, 21, 0, 19)
+off_3.Font = Enum.Font.SourceSans
+off_3.Text = "X"
+off_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+off_3.TextSize = 20.000
+
+Spawn.Name = "Spawn"
+Spawn.Parent = Frame_3
+Spawn.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+Spawn.BorderSizePixel = 0
+Spawn.Position = UDim2.new(0.0487773344, 0, 0.0450160764, 0)
+Spawn.Size = UDim2.new(0, 92, 0, 23)
+Spawn.Font = Enum.Font.SourceSans
+Spawn.Text = "Spawn"
+Spawn.TextColor3 = Color3.fromRGB(0, 0, 0)
+Spawn.TextSize = 20.000
+Spawn.TextWrapped = true
+
+PaP.Name = "PaP"
+PaP.Parent = Frame_3
+PaP.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+PaP.BorderSizePixel = 0
+PaP.Position = UDim2.new(0.561904848, 0, 0.0450160764, 0)
+PaP.Size = UDim2.new(0, 82, 0, 23)
+PaP.Font = Enum.Font.SourceSans
+PaP.Text = "PaP"
+PaP.TextColor3 = Color3.fromRGB(0, 0, 0)
+PaP.TextSize = 20.000
+
+vr.Name = "vr"
+vr.Parent = Frame_3
+vr.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+vr.BorderSizePixel = 0
+vr.Position = UDim2.new(0.561904848, 0, 0.157556266, 0)
+vr.Size = UDim2.new(0, 82, 0, 23)
+vr.Font = Enum.Font.SourceSans
+vr.Text = "Rare Secret"
+vr.TextColor3 = Color3.fromRGB(0, 0, 0)
+vr.TextSize = 20.000
+
+Alien.Name = "Alien"
+Alien.Parent = Frame_3
+Alien.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+Alien.BorderSizePixel = 0
+Alien.Position = UDim2.new(0.0487773344, 0, 0.157556266, 0)
+Alien.Size = UDim2.new(0, 92, 0, 23)
+Alien.Font = Enum.Font.SourceSans
+Alien.Text = "Alien"
+Alien.TextColor3 = Color3.fromRGB(0, 0, 0)
+Alien.TextSize = 20.000
+Alien.TextWrapped = true
+
+TheWayOut.Name = "TheWayOut"
+TheWayOut.Parent = Frame_3
+TheWayOut.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+TheWayOut.BorderSizePixel = 0
+TheWayOut.Position = UDim2.new(0.0487773344, 0, 0.276527345, 0)
+TheWayOut.Size = UDim2.new(0, 92, 0, 23)
+TheWayOut.Font = Enum.Font.SourceSans
+TheWayOut.Text = "TheWayOut"
+TheWayOut.TextColor3 = Color3.fromRGB(0, 0, 0)
+TheWayOut.TextSize = 20.000
+TheWayOut.TextWrapped = true
+
+AtomicBomb.Name = "AtomicBomb"
+AtomicBomb.Parent = Frame_3
+AtomicBomb.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+AtomicBomb.BorderSizePixel = 0
+AtomicBomb.Position = UDim2.new(0.561904848, 0, 0.276527345, 0)
+AtomicBomb.Size = UDim2.new(0, 82, 0, 23)
+AtomicBomb.Font = Enum.Font.SourceSans
+AtomicBomb.Text = "Atomic Bomb"
+AtomicBomb.TextColor3 = Color3.fromRGB(0, 0, 0)
+AtomicBomb.TextScaled = true
+AtomicBomb.TextSize = 20.000
+AtomicBomb.TextWrapped = true
+
+ag.Name = "ag"
+ag.Parent = Frame_3
+ag.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+ag.BorderSizePixel = 0
+ag.Position = UDim2.new(0.0476191193, 0, 0.752411604, 0)
+ag.Size = UDim2.new(0, 190, 0, 65)
+ag.Font = Enum.Font.SourceSans
+ag.Text = "Teleport to all guns"
+ag.TextColor3 = Color3.fromRGB(0, 0, 0)
+ag.TextScaled = true
+ag.TextSize = 20.000
+ag.TextWrapped = true
+
+misc.Name = "misc"
+misc.Parent = Frame
+misc.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+misc.BorderSizePixel = 0
+misc.Position = UDim2.new(0.059459459, 0, 0.667486906, 0)
+misc.Size = UDim2.new(0, 161, 0, 37)
+misc.Font = Enum.Font.SourceSans
+misc.Text = "Misc"
+misc.TextColor3 = Color3.fromRGB(0, 0, 0)
+misc.TextSize = 20.000
+
+Frame_4.Parent = misc
+Frame_4.BackgroundColor3 = Color3.fromRGB(109, 157, 117)
+Frame_4.BorderSizePixel = 0
+Frame_4.Position = UDim2.new(-0.0683229789, 0, 1.62162161, 0)
+Frame_4.Size = UDim2.new(0, 185, 0, 93)
+Frame_4.Visible = false
+
+off_4.Name = "off"
+off_4.Parent = Frame_4
+off_4.BackgroundColor3 = Color3.fromRGB(173, 0, 0)
+off_4.BorderSizePixel = 0
+off_4.Position = UDim2.new(0.9297297, 0, 0.949754894, 0)
+off_4.Size = UDim2.new(0, 21, 0, 19)
+off_4.Font = Enum.Font.SourceSans
+off_4.Text = "X"
+off_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+off_4.TextSize = 20.000
+
+pnt.Name = "pnt"
+pnt.Parent = Frame_4
+pnt.BackgroundColor3 = Color3.fromRGB(177, 255, 192)
+pnt.BorderSizePixel = 0
+pnt.Position = UDim2.new(0.205405399, 0, 0.078125, 0)
+pnt.Size = UDim2.new(0, 106, 0, 75)
+pnt.Font = Enum.Font.SourceSans
+pnt.Text = "Pack a Punch no tp :)"
+pnt.TextColor3 = Color3.fromRGB(0, 0, 0)
+pnt.TextSize = 20.000
+pnt.TextWrapped = true
+
+TextButton.Parent = sat
+TextButton.BackgroundColor3 = Color3.fromRGB(148, 214, 161)
+TextButton.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.472429216, 0, 0.0421545655, 0)
+TextButton.Size = UDim2.new(0, 73, 0, 28)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "OPEN"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+-- Scripts:
+
+local function JBOGPU_fake_script() -- Frame.drag 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(JBOGPU_fake_script)()
+local function UEHFON_fake_script() -- off.LocalScript 
+	local script = Instance.new('LocalScript', off)
+
+	script.Parent.MouseButton1Click:connect(function()
+		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.TextButton.Visible = true
+	end)
+end
+coroutine.wrap(UEHFON_fake_script)()
+local function HBFDGH_fake_script() -- wpns.LocalScript 
+	local script = Instance.new('LocalScript', wpns)
+
+	script.Parent.MouseButton1Click:connect(function()
+		script.Parent.Frame.Visible = true
+	end)
+end
+coroutine.wrap(HBFDGH_fake_script)()
+local function SRZRSA_fake_script() -- off_2.LocalScript 
+	local script = Instance.new('LocalScript', off_2)
+
+	script.Parent.MouseButton1Click:connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(SRZRSA_fake_script)()
+local function OWERJL_fake_script() -- MG42.LocalScript 
+	local script = Instance.new('LocalScript', MG42)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local module = require(game.ReplicatedStorage.Weapon.MG42)
+		local old = module.new
+		module.new = function(...)
+			local ret = old(...)
+			ret.stored_ammo = math.huge
+			ret.ammo = math.huge
+			ret.shoot_wait = 0
+			ret.inaccuracy = 0
+			return ret
+		end
+	end)
+end
+coroutine.wrap(OWERJL_fake_script)()
+local function CPRLCGI_fake_script() -- SVD.LocalScript 
+	local script = Instance.new('LocalScript', SVD)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local module = require(game.ReplicatedStorage.Weapon.SVD)
+		local old = module.new
+		module.new = function(...)
+			local ret = old(...)
+			ret.stored_ammo = math.huge
+			ret.ammo = math.huge
+			ret.shoot_wait = 0
+			ret.inaccuracy = 0
+			return ret
+		end
+	end)
+end
+coroutine.wrap(CPRLCGI_fake_script)()
+local function XEOZEGW_fake_script() -- M14.LocalScript 
+	local script = Instance.new('LocalScript', M14)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local module = require(game.ReplicatedStorage.Weapon.M14)
+		local old = module.new
+		module.new = function(...)
+			local ret = old(...)
+			ret.stored_ammo = math.huge
+			ret.ammo = math.huge
+			ret.shoot_wait = 0
+			ret.inaccuracy = 0
+			return ret
+		end
+	end)
+end
+coroutine.wrap(XEOZEGW_fake_script)()
+local function SZXGDEP_fake_script() -- M16A2.LocalScript 
+	local script = Instance.new('LocalScript', M16A2)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local module = require(game.ReplicatedStorage.Weapon["M16A2/M203"])
+		local old = module.new
+		module.new = function(...)
+			local ret = old(...)
+			ret.stored_ammo = math.huge
+			ret.ammo = math.huge
+			ret.shoot_wait = 0
+			ret.inaccuracy = 0
+			return ret
+		end
+	end)
+end
+coroutine.wrap(SZXGDEP_fake_script)()
+local function MUNEWK_fake_script() -- M1911.LocalScript 
+	local script = Instance.new('LocalScript', M1911)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local module = require(game.ReplicatedStorage.Weapon.M1911)
+		local old = module.new
+		module.new = function(...)
+			local ret = old(...)
+			ret.stored_ammo = math.huge
+			ret.ammo = math.huge
+			ret.shoot_wait = 0
+			ret.inaccuracy = 0
+			return ret
+		end
+	end)
+end
+coroutine.wrap(MUNEWK_fake_script)()
+local function XXEFP_fake_script() -- MP5k.LocalScript 
+	local script = Instance.new('LocalScript', MP5k)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local module = require(game.ReplicatedStorage.Weapon.MP5k)
+		local old = module.new
+		module.new = function(...)
+			local ret = old(...)
+			ret.stored_ammo = math.huge
+			ret.ammo = math.huge
+			ret.shoot_wait = 0
+			ret.inaccuracy = 0
+			return ret
+		end
+	end)
+end
+coroutine.wrap(XXEFP_fake_script)()
+local function QNHL_fake_script() -- M1014.LocalScript 
+	local script = Instance.new('LocalScript', M1014)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local module = require(game.ReplicatedStorage.Weapon.M1014)
+		local old = module.new
+		module.new = function(...)
+			local ret = old(...)
+			ret.stored_ammo = math.huge
+			ret.ammo = math.huge
+			ret.shoot_wait = 0
+			ret.inaccuracy = 0
+			ret.bullet_count = math.huge
+			return ret
+		end
+	end)
+end
+coroutine.wrap(QNHL_fake_script)()
+local function YAZJO_fake_script() -- RayGun.LocalScript 
+	local script = Instance.new('LocalScript', RayGun)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local module = require(game.ReplicatedStorage.Weapon.RayGun)
+		local old = module.new
+		module.new = function(...)
+			local ret = old(...)
+			ret.stored_ammo = math.huge
+			ret.ammo = math.huge
+			ret.shoot_wait = 0
+			ret.inaccuracy = 0
+			return ret
+		end
+	end)
+end
+coroutine.wrap(YAZJO_fake_script)()
+local function JRHULM_fake_script() -- AWP.LocalScript 
+	local script = Instance.new('LocalScript', AWP)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local module = require(game.ReplicatedStorage.Weapon.AWP)
+		local old = module.new
+		module.new = function(...)
+			local ret = old(...)
+			ret.stored_ammo = math.huge
+			ret.ammo = math.huge
+			ret.shoot_wait = 0
+			ret.inaccuracy = 0
+			return ret
+		end
+	end)
+end
+coroutine.wrap(JRHULM_fake_script)()
+local function YWJIV_fake_script() -- M4A1.LocalScript 
+	local script = Instance.new('LocalScript', M4A1)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local module = require(game.ReplicatedStorage.Weapon.M4A1)
+		local old = module.new
+		module.new = function(...)
+			local ret = old(...)
+			ret.stored_ammo = math.huge
+			ret.ammo = math.huge
+			ret.shoot_wait = 0
+			ret.inaccuracy = 0
+			return ret
+		end
+	end)
+end
+coroutine.wrap(YWJIV_fake_script)()
+local function ILNRH_fake_script() -- DE.LocalScript 
+	local script = Instance.new('LocalScript', DE)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local module = require(game.ReplicatedStorage.Weapon["Desert Eagle"])
+		local old = module.new
+		module.new = function(...)
+			local ret = old(...)
+			ret.stored_ammo = math.huge
+			ret.ammo = math.huge
+			ret.shoot_wait = 0
+			ret.inaccuracy = 0
+			return ret
+		end
+	end)
+end
+coroutine.wrap(ILNRH_fake_script)()
+local function KNASYIM_fake_script() -- Crossbow.LocalScript 
+	local script = Instance.new('LocalScript', Crossbow)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local module = require(game.ReplicatedStorage.Weapon.Crossbow)
+		local old = module.new
+		module.new = function(...)
+			local ret = old(...)
+			ret.stored_ammo = math.huge
+			ret.ammo = math.huge
+			ret.shoot_wait = 0
+			ret.inaccuracy = 0
+			return ret
+		end
+	end)
+end
+coroutine.wrap(KNASYIM_fake_script)()
+local function PEXA_fake_script() -- AK47.LocalScript 
+	local script = Instance.new('LocalScript', AK47)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local module = require(game.ReplicatedStorage.Weapon["AK-47"])
+		local old = module.new
+		module.new = function(...)
+			local ret = old(...)
+			ret.stored_ammo = math.huge
+			ret.ammo = math.huge
+			ret.shoot_wait = 0
+			ret.inaccuracy = 0
+			return ret
+		end
+	end)
+end
+coroutine.wrap(PEXA_fake_script)()
+local function XMYJ_fake_script() -- P90.LocalScript 
+	local script = Instance.new('LocalScript', P90)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local module = require(game.ReplicatedStorage.Weapon.P90)
+		local old = module.new
+		module.new = function(...)
+			local ret = old(...)
+			ret.stored_ammo = math.huge
+			ret.ammo = math.huge
+			ret.shoot_wait = 0
+			ret.inaccuracy = 0
+			return ret
+		end
+	end)
+end
+coroutine.wrap(XMYJ_fake_script)()
+local function STSFM_fake_script() -- R870.LocalScript 
+	local script = Instance.new('LocalScript', R870)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local module = require(game.ReplicatedStorage.Weapon.R870)
+		local old = module.new
+		module.new = function(...)
+			local ret = old(...)
+			ret.stored_ammo = math.huge
+			ret.ammo = math.huge
+			ret.shoot_wait = 0
+			ret.inaccuracy = 0
+			ret.bullet_count = 250
+			return ret
+		end
+	end)
+end
+coroutine.wrap(STSFM_fake_script)()
+local function LBFUFD_fake_script() -- DB.LocalScript 
+	local script = Instance.new('LocalScript', DB)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local module = require(game.ReplicatedStorage.Weapon["DB Shotgun"])
+		local old = module.new
+		module.new = function(...)
+			local ret = old(...)
+			ret.stored_ammo = math.huge
+			ret.ammo = math.huge
+			ret.shoot_wait = 0
+			ret.inaccuracy = 0
+			ret.bullet_count = 250
+			return ret
+		end
+	end)
+end
+coroutine.wrap(LBFUFD_fake_script)()
+local function FFKD_fake_script() -- G36C.LocalScript 
+	local script = Instance.new('LocalScript', G36C)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local module = require(game.ReplicatedStorage.Weapon.G36C)
+		local old = module.new
+		module.new = function(...)
+			local ret = old(...)
+			ret.stored_ammo = math.huge
+			ret.ammo = math.huge
+			ret.shoot_wait = 0
+			ret.inaccuracy = 0
+			return ret
+		end
+	end)
+end
+coroutine.wrap(FFKD_fake_script)()
+local function PMODS_fake_script() -- tps.LocalScript 
+	local script = Instance.new('LocalScript', tps)
+
+	script.Parent.MouseButton1Click:connect(function()
+		script.Parent.Frame.Visible = true
+	end)
+end
+coroutine.wrap(PMODS_fake_script)()
+local function XLMVUY_fake_script() -- off_3.LocalScript 
+	local script = Instance.new('LocalScript', off_3)
+
+	script.Parent.MouseButton1Click:connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(XLMVUY_fake_script)()
+local function CNGLSIR_fake_script() -- Spawn.LocalScript 
+	local script = Instance.new('LocalScript', Spawn)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local x = 320.699951
+		local y = 511.5
+		local z = 392.900024
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(x,y,z))
+	end)
+end
+coroutine.wrap(CNGLSIR_fake_script)()
+local function EVNVDDG_fake_script() -- PaP.LocalScript 
+	local script = Instance.new('LocalScript', PaP)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local x = 260.049133
+		local y = 323.5
+		local z = 786.841858
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(x,y,z))
+	end)
+end
+coroutine.wrap(EVNVDDG_fake_script)()
+local function KZFYNP_fake_script() -- vr.LocalScript 
+	local script = Instance.new('LocalScript', vr)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local x = 129.700012
+		local y = 327.700012
+		local z = 373.899994
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(x,y,z))
+	end)
+end
+coroutine.wrap(KZFYNP_fake_script)()
+local function ATMA_fake_script() -- Alien.LocalScript 
+	local script = Instance.new('LocalScript', Alien)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local x = 238.199997
+		local y = 337.80018
+		local z = 472.5
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(x,y,z))
+	end)
+end
+coroutine.wrap(ATMA_fake_script)()
+local function VQLI_fake_script() -- Alien.LocalScript 
+	local script = Instance.new('LocalScript', Alien)
+
+	
+end
+coroutine.wrap(VQLI_fake_script)()
+local function HNMV_fake_script() -- TheWayOut.LocalScript 
+	local script = Instance.new('LocalScript', TheWayOut)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local x = 262.00031
+		local y = 357.800049
+		local z = 571
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(x,y,z))
+	end)
+end
+coroutine.wrap(HNMV_fake_script)()
+local function MOZTMR_fake_script() -- AtomicBomb.LocalScript 
+	local script = Instance.new('LocalScript', AtomicBomb)
+
+	script.Parent.MouseButton1Click:connect(function()
+		local x = 160.200012
+		local y = 345.899994
+		local z = 551.400024
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(x,y,z))
+	end)
+end
+coroutine.wrap(MOZTMR_fake_script)()
+local function IKQITU_fake_script() -- ag.LocalScript 
+	local script = Instance.new('LocalScript', ag)
+
+	script.Parent.MouseButton1Click:connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(107,323,678))
+		wait(1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(114,335,565))
+		wait(1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(61,291,263))
+		wait(1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(183,306,180))
+		wait(1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(143,333,398))
+		wait(1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(3,267,184))
+		wait(1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(232,373,44))
+		wait(1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(317,271,142))
+		wait(1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(374,323,652))
+		wait(1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-144,313,280))
+		wait(1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(71,281,33))
+		wait(1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(148,259,323))
+		wait(1)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(320,511,392))
+	end)
+end
+coroutine.wrap(IKQITU_fake_script)()
+local function JKBDKQ_fake_script() -- misc.LocalScript 
+	local script = Instance.new('LocalScript', misc)
+
+	script.Parent.MouseButton1Click:connect(function()
+		script.Parent.Frame.Visible = true
+	end)
+end
+coroutine.wrap(JKBDKQ_fake_script)()
+local function WMEG_fake_script() -- off_4.LocalScript 
+	local script = Instance.new('LocalScript', off_4)
+
+	script.Parent.MouseButton1Click:connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(WMEG_fake_script)()
+local function LTZEI_fake_script() -- pnt.LocalScript 
+	local script = Instance.new('LocalScript', pnt)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("Players").DDiCraet.PlayerGui.PAP.Frame.Visible = true
+		wait(5)
+		game:GetService("Players").DDiCraet.PlayerGui.PAP.Frame.Visible = false
+	end)
+end
+coroutine.wrap(LTZEI_fake_script)()
+local function MQYAWAT_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:connect(function()
+		script.Parent.Parent.Frame.Visible = true
+		script.Parent.Visible = false
+	end)
+end
+coroutine.wrap(MQYAWAT_fake_script)()
