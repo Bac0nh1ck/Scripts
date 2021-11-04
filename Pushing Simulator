@@ -1,0 +1,112 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Mapple7777/UI-Librarys/main/UI-1/UI.lua"))()
+
+local Window = Library:Create("Pushing Simulator","Bac0nH1ck#0816")
+
+local Tab1 = Window:Tab("Player",true)
+
+Tab1:Label("GG")
+
+Tab1:Slider("Fov",70,120,function(s)
+    game:GetService'Workspace'.Camera.FieldOfView = s
+end)
+
+Tab1:Slider("WalkSpeed",16,120,function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Tab1:Slider("JumpPower",16,120,function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+Tab1:Button("Anti-Ragdoll",function()
+    game.Players.LocalPlayer.Character["Local Ragdoll"]:Destroy()
+    game.Players.LocalPlayer.Character["State Handler"]:Destroy()
+end)
+
+Tab1:Button("Super Push",function()
+
+local Animation = Instance.new("Animation")
+Animation.AnimationId = "rbxassetid://1984283994"
+ 
+Instance = Instance.new("Tool", game:GetService("Players").LocalPlayer.Backpack)
+Instance.RequiresHandle = false
+ 
+Instance.Activated:connect(
+    function()
+        if game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid").RigType == Enum.HumanoidRigType.R15 then
+            game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):LoadAnimation(Animation):Play()
+            for i, v in pairs(game:GetService("Players"):GetDescendants()) do
+                if v:IsA("RemoteEvent") and v.Name == "PushEvent" then
+                    v:FireServer()
+                end
+            end
+        else
+            for i, v in pairs(game:GetService("Players"):GetDescendants()) do
+                if v:IsA("RemoteEvent") and v.Name == "PushEvent" then
+                    v:FireServer()
+                end
+            end
+        end
+    end
+)
+
+end)
+
+Tab1:Button("Fe invisible",function()
+
+game:GetService("ReplicatedStorage").Events.Invisible:FireServer(game.Players.LocalPlayer.Character)
+
+end)
+
+local Tab2 = Window:Tab("Game",false)
+
+Tab2:Label("Trololo")
+
+Tab2:Button("Jail all",function()
+for i,v in pairs(game.Players:GetPlayers()) do 
+if v.Name~=game.Players.LocalPlayer.Name then 
+game.ReplicatedStorage.Events.Jail:FireServer(v)
+end
+end
+end)
+
+Tab2:Button("UnJail all",function()
+game.ReplicatedStorage.Events.Release:FireServer()
+end)
+
+Tab2:Toggle("Spam Sound",function(x)
+        shared.toggle = x
+    stop = shared.toggle
+while stop==true do
+if game.SoundService.RespectFilteringEnabled == false then
+for i,v in pairs(game.Workspace:GetDescendants()) do
+if v:IsA("Sound") then
+v:Play()
+end
+end
+else
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/Ts8TSAZN", 0, true))()
+notify("Sound is unexploitable.", warn(":("))
+end
+wait(0.01)
+end
+end)
+
+Tab2:Toggle("Spam Jail",function(x)
+    shared.toggle = x
+    stop = shared.toggle
+stop = shared.toggle
+while stop==true do
+for i,v in pairs(game.Players:GetPlayers()) do 
+if v.Name~=game.Players.LocalPlayer.Name then 
+game.ReplicatedStorage.Events.Jail:FireServer(v)
+end
+end
+game.ReplicatedStorage.Events.Release:FireServer()
+wait(0.01)
+end
+end)
+
+Tab2:Keybind("Vis/invis",Enum.KeyCode.RightShift,function()
+    Library:Toggle()
+end)
