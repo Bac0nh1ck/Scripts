@@ -1,0 +1,146 @@
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
+
+local w = library:CreateWindow("NDS Gui")
+
+local b = w:CreateFolder("Player")
+
+b:Label("Bac0nh1ck#0816",{
+    TextSize = 25;
+    TextColor = Color3.fromRGB(255,255,255); 
+    BgColor = Color3.fromRGB(69,69,69);
+
+}) 
+
+b:Slider("Fov",{
+    min = 70; 
+    max = 120; 
+    precise = true; 
+},function(value)
+ game:GetService'Workspace'.Camera.FieldOfView = value
+end)
+
+b:Slider("Speed",{
+    min = 16; 
+    max = 120; 
+    precise = true; 
+},function(value)
+ game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+end)
+
+b:Slider("Jump",{
+    min = 50; 
+    max = 120; 
+    precise = true; 
+},function(value)
+ game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
+end)
+
+b:Button("No Fall Damage",function()
+while wait(.5) do
+local falldamageScript = game:GetService("Players").LocalPlayer.Character:FindFirstChild("FallDamageScript")
+falldamageScript:remove()
+end
+end)
+
+local a = w:CreateFolder("Misc")
+
+a:Toggle("Vote Map",function(bool)
+    shared.toggle = bool
+votemenu = game.Players.LocalPlayer.PlayerGui.MainGui.MapVotePage
+votemenu.Visible=shared.toggle
+wait(1)
+local VirtualUser=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+VirtualUser:CaptureController()
+VirtualUser:ClickButton2(Vector2.new())
+end)
+end)
+
+a:Button("Free Ballon",function()
+local player = tostring(game.Players.LocalPlayer.Name)
+while true do
+if game.Workspace:FindFirstChild("GreenBalloon") then
+if not game.Workspace[player]:FindFirstChild("GreenBalloon") and not game.Players.LocalPlayer.Backpack:FindFirstChild("GreenBalloon") then
+local workspaceClone = game.Workspace.GreenBalloon:Clone()
+workspaceClone.Parent = game.Workspace[player]
+end
+else
+local balloonCheck = game.Workspace:GetDescendants()
+local balloonClone
+for i, balloon in ipairs(balloonCheck) do
+if (tostring(balloon.Name) == "GreenBalloon") then
+balloonClone = balloon:Clone()
+wait()
+end
+end
+balloonClone.Parent = game.Workspace
+local workspaceClone = game.Workspace.GreenBalloon:Clone()
+workspaceClone.Parent = game.Workspace[player]
+end
+wait()
+end
+end)
+
+a:Toggle("Auto Disaster Detected", function(vasde)
+    getgenv().trincckets = vasde
+if getgenv().trincckets then
+    local Character = game:GetService("Players").LocalPlayer.Character
+local Tag = Character:FindFirstChild("SurvivalTag")
+if Tag then
+game:GetService("StarterGui"):SetCore("SendNotification",{     
+Title = "Disaster Detected",     
+Text =   "" .. Tag.Value,
+Button1 = "Ok", Duration = 20, })
+end
+local function Repeat(R)
+   R.ChildAdded:connect(
+       function(Find)
+           if Find.Name == "SurvivalTag" then
+game:GetService("StarterGui"):SetCore("SendNotification",{     
+Title = "Disaster Detected",     
+Text =   "".. Find.Value,
+Button1 = "Ok", Duration = 20, })
+           end
+       end
+   )
+end
+Repeat(Character)
+game:GetService("Players").LocalPlayer.CharacterAdded:connect(
+   function(R)
+       Repeat(R)
+   end
+)
+end
+end)
+
+a:Toggle("Auto-Farm",function(bool)
+    shared.toggle = bool
+stop = shared.toggle
+while stop==true do
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-268, 179, 349)
+game.Players.LocalPlayer.Character.Humanoid.Jump = true
+wait(0.5)
+end
+
+end)
+
+local c = w:CreateFolder("Teleport")
+
+c:Button("Teleport Spawn",function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-290, 178, 379)
+end)
+
+c:Button("Teleport Map",function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-129, 47, 14)
+end)
+
+
+c:Box("Teleport Player","string",function(nick)
+local me = game.Players.LocalPlayer.Character
+
+local targetplayer = game.Workspace.nick.HumanoidRootPart
+
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z)
+end)
+
+a:DestroyGui()
