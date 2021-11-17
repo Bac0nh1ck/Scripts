@@ -1,0 +1,198 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local AntiInfect = Instance.new("TextButton")
+local RemoveKillBrick = Instance.new("TextButton")
+local BringWeapons = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+local Infect = Instance.new("TextButton")
+local Dizzy = Instance.new("TextButton")
+local Faster = Instance.new("TextButton")
+local AHack = Instance.new("TextButton")
+local OPBat = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 100
+Frame.Position = UDim2.new(0.491947293, 0, 0.226069272, 0)
+Frame.Size = UDim2.new(0, 261, 0, 173)
+Frame.Style = Enum.FrameStyle.RobloxRound
+Frame.Active = true
+Frame.Draggable = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0842911899, 0, -0.0462427735, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Infectious Smile GUI"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 20.000
+TextLabel.TextWrapped = true
+
+ScrollingFrame.Parent = Frame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+ScrollingFrame.Position = UDim2.new(0.0867867321, 0, 0.270812541, 0)
+ScrollingFrame.Size = UDim2.new(0, 203, 0, 100)
+ScrollingFrame.CanvasPosition = Vector2.new(0, 150)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 5, 0)
+ScrollingFrame.ScrollBarThickness = 10
+ScrollingFrame.VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+
+AntiInfect.Name = "AntiInfect"
+AntiInfect.Parent = ScrollingFrame
+AntiInfect.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AntiInfect.Position = UDim2.new(0.0935960561, 0, 0.0123584419, 0)
+AntiInfect.Size = UDim2.new(0, 165, 0, 50)
+AntiInfect.Style = Enum.ButtonStyle.RobloxRoundButton
+AntiInfect.Font = Enum.Font.Ubuntu
+AntiInfect.Text = "Anti-Infect"
+AntiInfect.TextColor3 = Color3.fromRGB(0, 0, 0)
+AntiInfect.TextSize = 20.000
+(AntiInfect).MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.Stats.Infected:Destroy() game.Players.LocalPlayer.Character.Stats.Infected:Destroy()
+end)
+
+OPBat.Name = "OPBat"
+OPBat.Parent = ScrollingFrame
+OPBat.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+OPBat.Position = UDim2.new(0.0935960561, 0, 0.43, 0)
+OPBat.Size = UDim2.new(0, 165, 0, 50)
+OPBat.Style = Enum.ButtonStyle.RobloxRoundButton
+OPBat.Font = Enum.Font.Ubuntu
+OPBat.Text = "OP Bat"
+OPBat.TextColor3 = Color3.fromRGB(0, 0, 0)
+OPBat.TextSize = 20.000
+(OPBat).MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.Bat.MaxUses:Destroy() game.Players.LocalPlayer.Character.Bat.Cooldown.Value = 0
+end)
+
+
+AHack.Name = "AHack"
+AHack.Parent = ScrollingFrame
+AHack.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AHack.Position = UDim2.new(0.0935960561, 0, 0.37, 0)
+AHack.Size = UDim2.new(0, 165, 0, 50)
+AHack.Style = Enum.ButtonStyle.RobloxRoundButton
+AHack.Font = Enum.Font.Ubuntu
+AHack.Text = "Disable AntiHack"
+AHack.TextColor3 = Color3.fromRGB(0, 0, 0)
+AHack.TextSize = 20.000
+(AHack).MouseButton1Down:connect(function()
+workspace.Map.AntiHack:Destroy() game.Players.LocalPlayer.Character.AntiFly:Destroy()
+end)
+
+
+RemoveKillBrick.Name = "RemoveKillBrick"
+RemoveKillBrick.Parent = ScrollingFrame
+RemoveKillBrick.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RemoveKillBrick.Position = UDim2.new(0.0935960561, 0, 0.0695839003, 0)
+RemoveKillBrick.Size = UDim2.new(0, 165, 0, 50)
+RemoveKillBrick.Style = Enum.ButtonStyle.RobloxRoundButton
+RemoveKillBrick.Font = Enum.Font.Ubuntu
+RemoveKillBrick.Text = "Remove KillBricks"
+RemoveKillBrick.TextColor3 = Color3.fromRGB(0, 0, 0)
+RemoveKillBrick.TextSize = 20.000
+(RemoveKillBrick).MouseButton1Down:connect(function()
+workspace.Map.KillBricks:Destroy()
+end)
+
+Infect.Name = "Infect"
+Infect.Parent = ScrollingFrame
+Infect.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Infect.Position = UDim2.new(0.0935960561, 0, 0.19, 0)
+Infect.Size = UDim2.new(0, 165, 0, 50)
+Infect.Style = Enum.ButtonStyle.RobloxRoundButton
+Infect.Font = Enum.Font.Ubuntu
+Infect.Text = "Infect"
+Infect.TextColor3 = Color3.fromRGB(0, 0, 0)
+Infect.TextSize = 20.000
+(Infect).MouseButton1Down:connect(function()
+workspace.Map.Infectors.Infector.Part.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+workspace.Map.Infectors.Infector.Part.CanCollide = false
+game.Players.LocalPlayer.Character.Infected.InfectedSpeed.Value = 0
+end)
+
+Dizzy.Name = "Dizzy"
+Dizzy.Parent = ScrollingFrame
+Dizzy.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Dizzy.Position = UDim2.new(0.0935960561, 0, 0.25, 0)
+Dizzy.Size = UDim2.new(0, 165, 0, 50)
+Dizzy.Style = Enum.ButtonStyle.RobloxRoundButton
+Dizzy.Font = Enum.Font.Ubuntu
+Dizzy.Text = "Speed"
+Dizzy.TextColor3 = Color3.fromRGB(0, 0, 0)
+Dizzy.TextSize = 20.000
+(Dizzy).MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+end)
+
+Faster.Name = "Faster"
+Faster.Parent = ScrollingFrame
+Faster.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Faster.Position = UDim2.new(0.0935960561, 0, 0.31, 0)
+Faster.Size = UDim2.new(0, 165, 0, 50)
+Faster.Style = Enum.ButtonStyle.RobloxRoundButton
+Faster.Font = Enum.Font.Ubuntu
+Faster.Text = "Reset"
+Faster.TextColor3 = Color3.fromRGB(0, 0, 0)
+Faster.TextSize = 20.000
+(Faster).MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.Head:Destroy()
+end)
+
+BringWeapons.Name = "BringWeapons"
+BringWeapons.Parent = ScrollingFrame
+BringWeapons.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BringWeapons.Position = UDim2.new(0.0935960561, 0, 0.128543437, 0)
+BringWeapons.Size = UDim2.new(0, 165, 0, 50)
+BringWeapons.Style = Enum.ButtonStyle.RobloxRoundButton
+BringWeapons.Font = Enum.Font.Ubuntu
+BringWeapons.Text = "Bring Weapons"
+BringWeapons.TextColor3 = Color3.fromRGB(0, 0, 0)
+BringWeapons.TextSize = 20.000
+(BringWeapons).MouseButton1Down:connect(function()
+workspace.Map.Terrain.Vendor.BottleCollection.Bottle.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+workspace.Map.Terrain.Vendor.BatCollection.Bat.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+end)
+
+Close.Name = "Close"
+Close.Parent = Frame
+Close.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Close.Position = UDim2.new(0.94081533, 0, -0.0352032557, 0)
+Close.Size = UDim2.new(0, 21, 0, 22)
+Close.Style = Enum.ButtonStyle.RobloxRoundButton
+Close.Font = Enum.Font.Ubuntu
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextSize = 20.000
+(Close).MouseButton1Down:connect(function()
+game.CoreGui.ScreenGui:Destroy()
+end)
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.0804597512, 0, -0.14450869, 0)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Witz#7727"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 15.000
+TextLabel_2.TextWrapped = true
