@@ -17,123 +17,186 @@
 ..A.......
 .B........
 --]]
-game:GetService("StarterGui"):SetCore("SendNotification", {  	Title = "bac0nhack"; 	Text = "thanks for using my script"; 	Icon = "rbxthumb://type=Asset&id=8346949257&w=150&h=150"}) 
-Duration = 16;
+game:GetService("StarterGui"):SetCore(
+    "SendNotification",
+    {Title = "bac0nhack", Text = "thanks for using my script", Icon = "rbxthumb://type=Asset&id=8346949257&w=150&h=150"}
+)
+Duration = 16
 wait(2)
-game:GetService("StarterGui"):SetCore("SendNotification", {  	Title = "bac0nhack"; 	Text = "prefixes - /e | ."; 	Icon = "rbxthumb://type=Asset&id=8346949257&w=150&h=150"}) 
-Duration = 16;
+game:GetService("StarterGui"):SetCore(
+    "SendNotification",
+    {Title = "bac0nhack", Text = "prefixes - /e | .", Icon = "rbxthumb://type=Asset&id=8346949257&w=150&h=150"}
+)
+Duration = 16
 wait(2)
-game:GetService("StarterGui"):SetCore("SendNotification", {  	Title = "bac0nhack"; 	Text = "to see the commands write '/e cmds' or '.cmds'"; 	Icon = "rbxthumb://type=Asset&id=8346949257&w=150&h=150"}) 
-Duration = 16;
-game.Players.LocalPlayer.Chatted:Connect(function(msg)
-if msg == "/e cmds" then 
-game:GetService("StarterGui"):SetCore("SendNotification", {  	Title = "bac0nhack"; 	Text = "/e nfalldmg | /e tpspawn | /e tpmap | /e vm | /e unvm | /e fballon | /e cmdsinfo"; 	Icon = "rbxthumb://type=Asset&id=8346949257&w=150&h=150"}) 
-Duration = 16;
-end
-if msg == ".cmds" then 
-game:GetService("StarterGui"):SetCore("SendNotification", {  	Title = "bac0nhack"; 	Text = ".nfalldmg | .tpspawn | .tpmap | .vm | .unvm | .fballon | .cmdsinfo"; 	Icon = "rbxthumb://type=Asset&id=8346949257&w=150&h=150"}) 
-Duration = 16;
-end
-if msg == "/e cmdsinfo" then 
-game:GetService("StarterGui"):SetCore("SendNotification", {  	Title = "bac0nhack"; 	Text = "nfalldmg - removes damage from falling | tpspawn - teleports to spawn | tpmap - teleports to map| vm - free vote map"; 	Icon = "rbxthumb://type=Asset&id=8346949257&w=150&h=150"}) 
-Duration = 16;
-wait(2.5)
-game:GetService("StarterGui"):SetCore("SendNotification", {  	Title = "bac0nhack"; 	Text = "unvm - hide vote map | fballon - if someone is holding a ballon you will get it"; 	Icon = "rbxthumb://type=Asset&id=8346949257&w=150&h=150"}) 
-Duration = 16;
-end
-if msg == ".cmdsinfo" then 
-game:GetService("StarterGui"):SetCore("SendNotification", {  	Title = "bac0nhack"; 	Text = "nfalldmg - removes damage from falling | tpspawn - teleports to spawn | tpmap - teleports to map| vm - free vote map"; 	Icon = "rbxthumb://type=Asset&id=8346949257&w=150&h=150"}) 
-Duration = 16;
-wait(2.5)
-game:GetService("StarterGui"):SetCore("SendNotification", {  	Title = "bac0nhack"; 	Text = "unvm - hide vote map | fballon - if someone is holding a ballon you will get it"; 	Icon = "rbxthumb://type=Asset&id=8346949257&w=150&h=150"}) 
-Duration = 16;
-end
-if msg == "/e nfalldmg" then
-local falldamageScript = game:GetService("Players").LocalPlayer.Character:FindFirstChild("FallDamageScript")
-falldamageScript:remove()
-end
-if msg == ".nfalldmg" then
-local falldamageScript = game:GetService("Players").LocalPlayer.Character:FindFirstChild("FallDamageScript")
-falldamageScript:remove()
-end
-if msg == "/e tpspawn" then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-290, 178, 379)
-end
-if msg == ".tpspawn" then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-290, 178, 379)
-end
-if msg == "/e tpmap" then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-129, 47, 14)
-end
-if msg == ".tpmap" then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-129, 47, 14)
-end
-if msg == "/e vm" then
-bacon = true
-votemenu = game.Players.LocalPlayer.PlayerGui.MainGui.MapVotePage
-votemenu.Visible = bacon
-end
-if msg == ".vm" then
-bacon = true
-votemenu = game.Players.LocalPlayer.PlayerGui.MainGui.MapVotePage
-votemenu.Visible = bacon
-end
-if msg == "/e unvm" then
-bacon = false
-votemenu = game.Players.LocalPlayer.PlayerGui.MainGui.MapVotePage
-votemenu.Visible = bacon
-end
-if msg == ".unvm" then
-bacon = false
-votemenu = game.Players.LocalPlayer.PlayerGui.MainGui.MapVotePage
-votemenu.Visible = bacon
-end
-if msg == "/e fballon" then
-local player = tostring(game.Players.LocalPlayer.Name)
-while true do
-if game.Workspace:FindFirstChild("GreenBalloon") then
-if not game.Workspace[player]:FindFirstChild("GreenBalloon") and not game.Players.LocalPlayer.Backpack:FindFirstChild("GreenBalloon") then
-local workspaceClone = game.Workspace.GreenBalloon:Clone()
-workspaceClone.Parent = game.Workspace[player]
-end
-else
-local balloonCheck = game.Workspace:GetDescendants()
-local balloonClone
-for i, balloon in ipairs(balloonCheck) do
-if (tostring(balloon.Name) == "GreenBalloon") then
-balloonClone = balloon:Clone()
-wait()
-end
-end
-balloonClone.Parent = game.Workspace
-local workspaceClone = game.Workspace.GreenBalloon:Clone()
-workspaceClone.Parent = game.Workspace[player]
-end
-wait()
-end
-end
-if msg == ".fballon" then
-local player = tostring(game.Players.LocalPlayer.Name)
-while true do
-if game.Workspace:FindFirstChild("GreenBalloon") then
-if not game.Workspace[player]:FindFirstChild("GreenBalloon") and not game.Players.LocalPlayer.Backpack:FindFirstChild("GreenBalloon") then
-local workspaceClone = game.Workspace.GreenBalloon:Clone()
-workspaceClone.Parent = game.Workspace[player]
-end
-else
-local balloonCheck = game.Workspace:GetDescendants()
-local balloonClone
-for i, balloon in ipairs(balloonCheck) do
-if (tostring(balloon.Name) == "GreenBalloon") then
-balloonClone = balloon:Clone()
-wait()
-end
-end
-balloonClone.Parent = game.Workspace
-local workspaceClone = game.Workspace.GreenBalloon:Clone()
-workspaceClone.Parent = game.Workspace[player]
-end
-wait()
-end
-end
-end)
+game:GetService("StarterGui"):SetCore(
+    "SendNotification",
+    {
+        Title = "bac0nhack",
+        Text = "to see the commands write '/e cmds' or '.cmds'",
+        Icon = "rbxthumb://type=Asset&id=8346949257&w=150&h=150"
+    }
+)
+Duration = 16
+game.Players.LocalPlayer.Chatted:Connect(
+    function(msg)
+        if msg == "/e cmds" then
+            game:GetService("StarterGui"):SetCore(
+                "SendNotification",
+                {
+                    Title = "bac0nhack",
+                    Text = "/e nfalldmg | /e tpspawn | /e tpmap | /e vm | /e unvm | /e fballon | /e cmdsinfo",
+                    Icon = "rbxthumb://type=Asset&id=8346949257&w=150&h=150"
+                }
+            )
+            Duration = 16
+        end
+        if msg == ".cmds" then
+            game:GetService("StarterGui"):SetCore(
+                "SendNotification",
+                {
+                    Title = "bac0nhack",
+                    Text = ".nfalldmg | .tpspawn | .tpmap | .vm | .unvm | .fballon | .cmdsinfo",
+                    Icon = "rbxthumb://type=Asset&id=8346949257&w=150&h=150"
+                }
+            )
+            Duration = 16
+        end
+        if msg == "/e cmdsinfo" then
+            game:GetService("StarterGui"):SetCore(
+                "SendNotification",
+                {
+                    Title = "bac0nhack",
+                    Text = "nfalldmg - removes damage from falling | tpspawn - teleports to spawn | tpmap - teleports to map| vm - free vote map",
+                    Icon = "rbxthumb://type=Asset&id=8346949257&w=150&h=150"
+                }
+            )
+            Duration = 16
+            wait(2.5)
+            game:GetService("StarterGui"):SetCore(
+                "SendNotification",
+                {
+                    Title = "bac0nhack",
+                    Text = "unvm - hide vote map | fballon - if someone is holding a ballon you will get it",
+                    Icon = "rbxthumb://type=Asset&id=8346949257&w=150&h=150"
+                }
+            )
+            Duration = 16
+        end
+        if msg == ".cmdsinfo" then
+            game:GetService("StarterGui"):SetCore(
+                "SendNotification",
+                {
+                    Title = "bac0nhack",
+                    Text = "nfalldmg - removes damage from falling | tpspawn - teleports to spawn | tpmap - teleports to map| vm - free vote map",
+                    Icon = "rbxthumb://type=Asset&id=8346949257&w=150&h=150"
+                }
+            )
+            Duration = 16
+            wait(2.5)
+            game:GetService("StarterGui"):SetCore(
+                "SendNotification",
+                {
+                    Title = "bac0nhack",
+                    Text = "unvm - hide vote map | fballon - if someone is holding a ballon you will get it",
+                    Icon = "rbxthumb://type=Asset&id=8346949257&w=150&h=150"
+                }
+            )
+            Duration = 16
+        end
+        if msg == "/e nfalldmg" then
+            local falldamageScript = game:GetService("Players").LocalPlayer.Character:FindFirstChild("FallDamageScript")
+            falldamageScript:remove()
+        end
+        if msg == ".nfalldmg" then
+            local falldamageScript = game:GetService("Players").LocalPlayer.Character:FindFirstChild("FallDamageScript")
+            falldamageScript:remove()
+        end
+        if msg == "/e tpspawn" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-290, 178, 379)
+        end
+        if msg == ".tpspawn" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-290, 178, 379)
+        end
+        if msg == "/e tpmap" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-129, 47, 14)
+        end
+        if msg == ".tpmap" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-129, 47, 14)
+        end
+        if msg == "/e vm" then
+            bacon = true
+            votemenu = game.Players.LocalPlayer.PlayerGui.MainGui.MapVotePage
+            votemenu.Visible = bacon
+        end
+        if msg == ".vm" then
+            bacon = true
+            votemenu = game.Players.LocalPlayer.PlayerGui.MainGui.MapVotePage
+            votemenu.Visible = bacon
+        end
+        if msg == "/e unvm" then
+            bacon = false
+            votemenu = game.Players.LocalPlayer.PlayerGui.MainGui.MapVotePage
+            votemenu.Visible = bacon
+        end
+        if msg == ".unvm" then
+            bacon = false
+            votemenu = game.Players.LocalPlayer.PlayerGui.MainGui.MapVotePage
+            votemenu.Visible = bacon
+        end
+        if msg == "/e fballon" then
+            local player = tostring(game.Players.LocalPlayer.Name)
+            while true do
+                if game.Workspace:FindFirstChild("GreenBalloon") then
+                    if
+                        not game.Workspace[player]:FindFirstChild("GreenBalloon") and
+                            not game.Players.LocalPlayer.Backpack:FindFirstChild("GreenBalloon")
+                     then
+                        local workspaceClone = game.Workspace.GreenBalloon:Clone()
+                        workspaceClone.Parent = game.Workspace[player]
+                    end
+                else
+                    local balloonCheck = game.Workspace:GetDescendants()
+                    local balloonClone
+                    for i, balloon in ipairs(balloonCheck) do
+                        if (tostring(balloon.Name) == "GreenBalloon") then
+                            balloonClone = balloon:Clone()
+                            wait()
+                        end
+                    end
+                    balloonClone.Parent = game.Workspace
+                    local workspaceClone = game.Workspace.GreenBalloon:Clone()
+                    workspaceClone.Parent = game.Workspace[player]
+                end
+                wait()
+            end
+        end
+        if msg == ".fballon" then
+            local player = tostring(game.Players.LocalPlayer.Name)
+            while true do
+                if game.Workspace:FindFirstChild("GreenBalloon") then
+                    if
+                        not game.Workspace[player]:FindFirstChild("GreenBalloon") and
+                            not game.Players.LocalPlayer.Backpack:FindFirstChild("GreenBalloon")
+                     then
+                        local workspaceClone = game.Workspace.GreenBalloon:Clone()
+                        workspaceClone.Parent = game.Workspace[player]
+                    end
+                else
+                    local balloonCheck = game.Workspace:GetDescendants()
+                    local balloonClone
+                    for i, balloon in ipairs(balloonCheck) do
+                        if (tostring(balloon.Name) == "GreenBalloon") then
+                            balloonClone = balloon:Clone()
+                            wait()
+                        end
+                    end
+                    balloonClone.Parent = game.Workspace
+                    local workspaceClone = game.Workspace.GreenBalloon:Clone()
+                    workspaceClone.Parent = game.Workspace[player]
+                end
+                wait()
+            end
+        end
+    end
+)
