@@ -1,0 +1,30 @@
+power = 50 
+ 
+game:GetService('RunService').Stepped:connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+end)
+wait(.1)
+local bambam = Instance.new("BodyThrust")
+bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+bambam.Force = Vector3.new(power,0,power)
+bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+
+ local LP = game.Players.LocalPlayer
+game.ReplicatedStorage.ToolEvents.TpRollEvent:FireServer()
+repeat wait() until LP.Character
+for i,v in pairs(LP.Backpack:GetChildren()) do
+   if v.Name == "TpRoll" then
+       v.Parent = LP.Character
+   end
+end
+while true do
+   wait()
+   for i,v in pairs (LP.Character:GetChildren()) do
+       if v.Name == "TpRoll" then
+           v:Activate()
+       end
+   end
+end
