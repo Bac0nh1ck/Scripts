@@ -1,4 +1,10 @@
 game.StarterGui:SetCore("ChatMakeSystemMessage", {
+               Text = "Скрипт сделал: Bac0nH1ck <TT>";
+               Color = Color3.fromRGB(255,255,255);
+               TextSize = 16
+           })
+
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
                Text = "Что бы активировать бундл '/e {название бундла}'";
                Color = Color3.fromRGB(255,255,255);
                TextSize = 16
