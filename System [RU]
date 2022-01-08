@@ -1,5 +1,5 @@
 game.StarterGui:SetCore("ChatMakeSystemMessage", {
-               Text = "Скрипт сделал: Bac0nH1ck <TT>";
+               Text = "Скрипт сделал: bac0nhack <TT>";
                Color = Color3.fromRGB(255,255,255);
                TextSize = 16
            })
