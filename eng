@@ -1,6 +1,6 @@
 if Language == ENG then
 game.StarterGui:SetCore("ChatMakeSystemMessage", {
-               Text = "to activate the bundle write '/e {bundle}'";
+               Text = "to activate the bundle write '/e {bundle name}'";
                Color = Color3.fromRGB(255,255,255);
                TextSize = 16
            })
