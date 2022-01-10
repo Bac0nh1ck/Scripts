@@ -11,6 +11,7 @@ Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=891636393"
 Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=891627522"
 Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=891609353"
 Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=891617961"
+Animate.swim.SwimAnim.AnimationId = "https://www.roblox.com/asset/?id=1090133583"
 end
 if msg == "/e bubbly" then
 Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=910004836"
@@ -30,6 +31,7 @@ Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=742638842"
 Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=742637942"
 Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=742636889"
 Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=742637151"
+Animate.swim.SwimAnim.AnimationId = "http://www.roblox.com/asset/?id=837012509"
 end
 if msg == "/e elder" then
 Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=845397899"
@@ -39,6 +41,7 @@ Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=845386501"
 Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=845398858"
 Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=845392038"
 Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=845396048"
+Animte.swim.SwimAnim.AnimationId = "https://www.roblox.com/asset/?id=892268710" 
 end
 if msg == "/e knight" then
 Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=657595757"
@@ -48,6 +51,7 @@ Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=657564596"
 Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=658409194"
 Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=658360781"
 Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=657600338"
+Animte.swim.SwimAnim.AnimationId = "https://www.roblox.com/asset/?id=734327363"
 end
 if msg == "/e levitation" then
 Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616006778"
@@ -57,6 +61,7 @@ Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616010382"
 Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616008936"
 Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616003713"
 Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616005863"
+Animte.swim.SwimAnim.AnimationId = "https://www.roblox.com/asset/?id=619543721"
 end
 if msg == "/e mage" then
 Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=707742142"
@@ -66,6 +71,7 @@ Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=707861613"
 Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=707853694"
 Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=707826056"
 Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=707829716"
+Animte.swim.SwimAnim.AnimationId = "https://www.roblox.com/asset/?id=754638471"
 end
 if msg == "/e ninja" then
 Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=656117400"
@@ -75,6 +81,7 @@ Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=656118852"
 Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=656117878"
 Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=656114359"
 Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=656115606"
+Animte.swim.SwimAnim.AnimationId = "https://www.roblox.com/asset/?id=658832807"
 end
 if msg == "/e pirate" then
 Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=750781874"
@@ -84,6 +91,7 @@ Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=750783738"
 Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=750782230"
 Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=750779899"
 Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=750780242"
+Animte.swim.SwimAnim.AnimationId = "https://www.roblox.com/asset/?id=837025054"
 end
 if msg == "/e robot" then
 Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616088211"
@@ -93,6 +101,7 @@ Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616091570"
 Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616090535"
 Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616086039"
 Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616087089"
+Animte.swim.SwimAnim.AnimationId = "https://www.roblox.com/asset/?id=619522642"
 end
 if msg == "/e stylish" then
 Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616136790"
@@ -102,6 +111,7 @@ Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616140816"
 Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616139451"
 Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616133594"
 Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616134815"
+Animte.swim.SwimAnim.AnimationId = "https://www.roblox.com/asset/?id=619512450"
 end
 if msg == "/e superhero" then
 Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616111295"
@@ -111,6 +121,7 @@ Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616117076"
 Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616115533"
 Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616104706"
 Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616108001"
+Animte.swim.SwimAnim.AnimationId = "https://www.roblox.com/asset/?id=619529095"
 end
 if msg == "/e toy" then
 Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
@@ -120,6 +131,7 @@ Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=782842708"
 Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=782847020"
 Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=782843869"
 Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=782846423"
+Animte.swim.SwimAnim.AnimationId = "https://www.roblox.com/asset/?id=973772659"
 end
 if msg == "/e vampire" then
 Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=1083445855"
@@ -129,6 +141,7 @@ Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=1083462077"
 Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1083455352"
 Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=1083439238"
 Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=1083443587"
+Animte.swim.SwimAnim.AnimationId = "https://www.roblox.com/asset/?id=1113742944"
 end
 if msg == "/e werewolf" then
 Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=1083195517"
@@ -138,6 +151,7 @@ Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=1083216690"
 Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1083218792"
 Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=1083182000"
 Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=1083189019"
+Animte.swim.SwimAnim.AnimationId = "https://www.roblox.com/asset/?id=1113752975"
 end
 if msg == "/e zombie" then
 Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616158929"
@@ -147,6 +161,7 @@ Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
 Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616161997"
 Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616156119"
 Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616157476"
+Animte.swim.SwimAnim.AnimationId = "https://www.roblox.com/asset/?id=619537096"
 end
 
 -- Special
