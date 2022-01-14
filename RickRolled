@@ -1,0 +1,21 @@
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+               Text = "Injecting Script...";
+               Color = Color3.fromRGB(153, 0, 0);
+               TextSize = 25
+           })
+wait(0.5)
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+               Text = "Please wait";
+               Color = Color3.fromRGB(153, 0, 0);
+               TextSize = 25
+           })
+wait(4)
+local LocalPlayer = game.Players.LocalPlayer
+LocalPlayer:Kick("You have been banned from this game: We have detected scripts")
+wait(0.00001)
+placeid = 5032498584
+tp = game:GetService('TeleportService')
+
+for i,v in pairs (game.Players:GetChildren()) do
+    tp:Teleport(placeid, v)
+end
