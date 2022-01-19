@@ -1,0 +1,2 @@
+game:GetService("StarterGui"):SetCore("SendNotification", {  	Title = "bac0nhack"; 	Text = "thanks for using the script from me"; 	Icon = "rbxthumb://type=Asset&id=8346949257&w=150&h=150"}) 
+Duration = 16;
