@@ -1,0 +1,46 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/miroeramaa/TurtleLib/main/TurtleUiLib.lua"))()
+
+local window = library:Window("Brits VIP Party")
+
+local plrs = game:GetService("Players")
+local plr = plrs.LocalPlayer
+local char = plr.Character
+local hrp = char.HumanoidRootPart
+local meshes = {}
+local collectinf = false
+local collectamount = 55
+
+function equipcar()
+    game:GetService("ReplicatedStorage").Packages._Index["sleitnick_knit@1.0.9"].knit.Services.VehicleService.__comm__.RE.GiveVehicle:FireServer()
+end
+
+window:Button("Collect Brits", function()
+   for i,v in pairs(Workspace:GetChildren()) do
+        if v:IsA("MeshPart") then
+             table.insert(meshes, v.Name)
+        end
+     end
+     for i,v in pairs(meshes) do
+        wait(.1)
+        if i < collectamount then
+            equipcar()
+            hrp.CFrame = game.Workspace[v].CFrame
+            table.remove(meshes, i)
+            print(i)
+        else
+            table.remove(meshes, i)
+        end
+    end
+end)
+
+window:Slider("Collect Amount",1,500,55, function(value)
+   collectamount = value
+end)
+
+window:Button("Collect Text (do this first for 120 multipler)", function()
+for i,v in pairs(game:GetService("Workspace").PantheressText:GetChildren()) do
+        wait(.1)
+        equipcar()
+        hrp.CFrame = v.CFrame 
+    end
+end)
