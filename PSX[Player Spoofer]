@@ -1,0 +1,31 @@
+local uiLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wally2", true))()
+local psxLib = require(game:GetService('ReplicatedStorage').Framework.Library)
+local mainWindow = uiLib:CreateWindow('Player Spoofer')
+
+do
+   local plrs = {}
+   mainWindow:Section('ydnac#2110')
+   mainWindow:Dropdown('Players', {
+       flag = "selectedPlr",
+       list = plrs
+   })
+
+   mainWindow:Button('Spoof', function()
+       game:GetService("ReplicatedStorage").Framework.Modules["2 | Network"]["new stats"]:Fire(psxLib.Network.Invoke('Get Stats', game:GetService('Players')[mainWindow.flags.selectedPlr]), game.Players.LocalPlayer)
+   end)
+   mainWindow:Button('Un-Spoof', function()
+       game:GetService("ReplicatedStorage").Framework.Modules["2 | Network"]["new stats"]:Fire(psxLib.Network.Invoke('Get Stats', game.Players.LocalPlayer), game.Players.LocalPlayer)
+   end)
+
+   for _,v in next, game:GetService('Players'):GetPlayers() do
+       if v ~= game:GetService('Players').LocalPlayer then
+           table.insert(plrs, tostring(v))
+       end
+   end
+   game:GetService('Players').PlayerAdded:Connect(function(v)
+       table.insert(plrs, tostring(v))
+   end)
+   game:GetService('Players').PlayerRemoving:Connect(function(v)
+       table.remove(plrs, table.find(plrs, tostring(v)))
+   end)
+end
