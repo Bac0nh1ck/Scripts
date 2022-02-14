@@ -1,5 +1,11 @@
 game.StarterGui:SetCore("ChatMakeSystemMessage", {
-               Text = "Скрипт сделал: bac0nhack <TT, YouTube>";
+               Text = "Привет, " .. game.Players.LocalPlayer.Name .. "! ";
+               Color = Color3.fromRGB(0,153,0);
+               TextSize = 16
+           })
+
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+               Text = "Скрипт сделал: bac0nhack <TT>";
                Color = Color3.fromRGB(0,153,0);
                TextSize = 16
            })
