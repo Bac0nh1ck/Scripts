@@ -1,0 +1,8 @@
+-- Message
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Bac0nh1ck/Scripts/main/System%20%5BRU%5D'))()
+-- Bundles
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Bac0nh1ck/Scripts/main/Bundles'))()
+-- Death Bug
+game:GetService'Players'.LocalPlayer.CharacterAdded:Connect(function(Character)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Bac0nh1ck/Scripts/main/Bundles'))()
+end);
