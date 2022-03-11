@@ -1,0 +1,27 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/miroeramaa/TurtleLib/main/TurtleUiLib.lua"))()
+
+local window = library:Window("Tower of Misery |  Teleports")
+
+window:Button("Auto Win", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").TopSection.Hallway.RewardDoor.CFrame
+end)
+
+window:Button("Winner Room", function()
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").TopSection.PortalTeleportationModel.PortalDoor.CFrame
+end)
+
+window:Button("Start", function()
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+print(pl.CFrame)
+
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local location = CFrame.new(6, -11, 47)
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait(0.1)
+pl.CFrame = location
+end)
+
+window:Button("Close Gui", function()
+library:Destroy()
+end)
