@@ -5,7 +5,7 @@ game.StarterGui:SetCore("ChatMakeSystemMessage", {
            })
 
 game.StarterGui:SetCore("ChatMakeSystemMessage", {
-               Text = "The script made: bac0nhack <TT>";
+               Text = "The script made: bac0n_hack <TT>";
                Color = Color3.fromRGB(0,153,0);
                TextSize = 16
            })
