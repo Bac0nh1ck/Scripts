@@ -1,16 +1,3 @@
---https://web.roblox.com/catalog/5063578607/Cyberpunk-Sniper
---// SETTINGS \\ --
- 
-local Fling = true --// Recommended: true
-local FlingBlockInvisible = false --// Recommended: false (So you can see the flinging block)
-local HighlightFlingBlock = false --// Recommended: true
-local FlingHighlightColor = Color3.fromRGB(238,130,238)
-local GunHatId = 5063578607-- // (Red Sci-Fi Scattergun)
---// GunHatId is the HatId you will use as the gun for the script, you must have the hat equipped.
- 
- 
- 
- 
 -- // MAIN \\ --
  
 local HAT_NAME = game:GetObjects("rbxassetid://"..tostring(GunHatId))[1].Name
